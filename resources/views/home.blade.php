@@ -8,6 +8,7 @@
     @vite('resources/css/app.css')
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    {{-- <link rel="stylesheet" href="css/style.css"> --}}
     <title>Document</title>
 </head>
 
@@ -194,28 +195,28 @@
                                     <div class="space-y-6">
                                         <div class="flex items-center">
                                             <input id="filter-mobile-category-0" name="category[]"
-                                                value="new-arrivals" type="checkbox"
+                                                value="tanpaNasi" type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                             <label for="filter-mobile-category-0"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">TANPA NASI</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-category-1" name="category[]" value="sale"
+                                            <input id="filter-mobile-category-1" name="category[]" value="nasiPutih"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                             <label for="filter-mobile-category-1"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">NASI PUTIH</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-category-2" name="category[]" value="travel"
-                                                type="checkbox" checked
+                                            <input id="filter-mobile-category-2" name="category[]" value="nasiMerah"
+                                                type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                             <label for="filter-mobile-category-2"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">NASI MERAH</label>
                                         </div>
                                         <div class="flex items-center">
                                             <input id="filter-mobile-category-3" name="category[]"
-                                                value="organization" type="checkbox"
+                                                value="variatif" type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                             <label for="filter-mobile-category-3"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">VARIATIF</label>
@@ -228,7 +229,7 @@
                 </div>
             </div>
 
-            <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+            <main class="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
                 <div class="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
                     {{-- <h1 class="text-4xl font-bold tracking-tight text-gray-900">Senjani</h1> --}}
                     <img class="h-32" src="img/AssetSenjani/LogoSenjaniKitchen.png" alt="Your Company">
@@ -236,15 +237,17 @@
                         <div x-data="{ isOpen: false }" class="relative inline-block text-left">
                             <div>
                                 <button type="button" @click="isOpen = !isOpen"
-                                    class="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900"
+                                    class="group inline-flex justify-center text-xl font-medium text-gray-700 hover:text-gray-900"
                                     id="menu-button" aria-expanded="false" aria-haspopup="true">
                                     Sort
-                                    <svg class="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
+                                    <svg :style="isOpen ? 'transform: rotate(180deg);' : ''" class="-mr-1 ml-1 h-6 w-8 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                                         viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                                         <path fill-rule="evenodd"
                                             d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
                                             clip-rule="evenodd" />
                                     </svg>
+
+                                    
                                 </button>
                             </div>
 
@@ -439,28 +442,28 @@
                                 <div x-show="isExpand" class="pt-6" id="filter-section-1">
                                     <div class="space-y-4">
                                         <div class="flex items-center">
-                                            <input id="filter-category-0" name="category[]" value="new-arrivals"
+                                            <input id="filter-category-0" name="category[]" value="tanpaNasi"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                             <label for="filter-category-0" class="ml-3 text-sm text-gray-600">TANPA
                                                 NASI</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-category-1" name="category[]" value="sale"
+                                            <input id="filter-category-1" name="category[]" value="nasiPutih"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                             <label for="filter-category-1" class="ml-3 text-sm text-gray-600">NASI
                                                 PUTIH</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-category-2" name="category[]" value="travel"
-                                                type="checkbox" checked
+                                            <input id="filter-category-2" name="category[]" value="nasiMerah"
+                                                type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                             <label for="filter-category-2" class="ml-3 text-sm text-gray-600">NASI
                                                 MERAH</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-category-3" name="category[]" value="organization"
+                                            <input id="filter-category-3" name="category[]" value="variatif"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                                             <label for="filter-category-3"
@@ -476,53 +479,98 @@
                             <!-- Your content -->
 
                             <div class="bg-white">
-                                <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-2 lg:max-w-7xl lg:px-8">
+                                <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-2 lg:max-w-7xl lg:px-12">
                                     {{-- <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2> --}}
 
-                                    <div
-                                        class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
-                                        <div class="group relative">
-                                            <div
-                                                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
-                                                <img src="img/AssetSenjani/1.Tanpa.jpg"
-                                                    alt="Front of men&#039;s Basic Tee in black."
-                                                    class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-                                            </div>
-                                            <div class="mt-4 flex justify-between">
-                                                <div>
-                                                    <h3 class="text-sm text-gray-700">
-                                                        <a href="#">
-                                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                                            Basic Tee
-                                                        </a>
-                                                    </h3>
-                                                    <p class="mt-1 text-sm text-gray-500">Black</p>
+                                    <div id="product-container"
+                                        class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+
+                                        <div class="product" data-categories="variatif">
+                                            <div class="group relative">
+                                                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg" alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                                                 </div>
-                                                <p class="text-sm font-medium text-gray-900">$35</p>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
                                             </div>
                                         </div>
 
-                                        <div class="group relative">
-                                            <div
-                                                class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
-                                                <img src="img/AssetSenjani/1.Tanpa.jpg"
-                                                    alt="Front of men&#039;s Basic Tee in black."
-                                                    class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-                                            </div>
-                                            <div class="mt-4 flex justify-between">
-                                                <div>
-                                                    <h3 class="text-sm text-gray-700">
-                                                        <a href="#">
-                                                            <span aria-hidden="true" class="absolute inset-0"></span>
-                                                            Basic Tee
-                                                        </a>
-                                                    </h3>
-                                                    <p class="mt-1 text-sm text-gray-500">Black</p>
+                                        <div class="product" data-categories="tanpaNasi">
+                                            <div class="group relative">
+                                                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/1.Tanpa.jpg" alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                                                 </div>
-                                                <p class="text-sm font-medium text-gray-900">$35</p>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
                                             </div>
                                         </div>
 
+                                        <div class="product" data-categories="nasiMerah">
+                                            <div class="group relative">
+                                                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/3.Merah.jpg" alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product" data-categories="nasiPutih">
+                                            <div class="group relative">
+                                                <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/2.Putih.jpg" alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true" class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        
+                                
                                         <!-- More products... -->
                                     </div>
                                 </div>
@@ -535,7 +583,7 @@
         </div>
     </div>
 
-
+<script src="js/script.js"></script>
 </body>
 
 </html>
