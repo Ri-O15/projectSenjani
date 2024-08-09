@@ -1,27 +1,25 @@
-// document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-//     checkbox.addEventListener('change', () => {
-//         // Ambil semua checkbox yang dicentang
-//         const checkedValues = Array.from(document.querySelectorAll('input[type="checkbox"]:checked')).map(cb => cb.value);
-//         const products = document.querySelectorAll('.product');
+document.querySelectorAll('input[name="category[]"]').forEach(function(checkbox) {
+    checkbox.addEventListener('change', function() {
+        filterProducts();
+    });
+});
 
-//         if (checkedValues.length === 0) {
-//             // Jika tidak ada checkbox yang dicentang, tampilkan semua produk
-//             products.forEach(product => {
-//                 product.style.display = 'block'; // Tampilkan produk
-//             });
-//         } else {
-//             // Filter produk berdasarkan checkbox yang dicentang
-//             products.forEach(product => {
-//                 const productCategories = product.getAttribute('data-categories').split(',');
-//                 // Periksa apakah salah satu kategori produk sesuai dengan kategori yang dicentang
-//                 const shouldShow = productCategories.some(category => checkedValues.includes(category));
+function filterProducts() {
+    let selectedCategories = [];
+    document.querySelectorAll('input[name="category[]"]:checked').forEach(function(checkbox) {
+        selectedCategories.push(checkbox.value);
+    });
 
-//                 if (shouldShow) {
-//                     product.style.display = 'block'; // Tampilkan produk
-//                 } else {
-//                     product.style.display = 'none'; // Sembunyikan produk
-//                 }
-//             });
-//         }
-//     });
-// });
+    document.querySelectorAll('#product-container .product').forEach(function(product) {
+        const productCategories = product.getAttribute('data-categories').split(' ');
+        if (selectedCategories.length === 0 || selectedCategories.some(category => productCategories
+                .includes(category))) {
+            product.style.display = 'block';
+        } else {
+            product.style.display = 'none';
+        }
+    });
+}
+
+// Inisialisasi filter saat halaman dimuat
+filterProducts();
