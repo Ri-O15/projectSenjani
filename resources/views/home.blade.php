@@ -129,38 +129,38 @@
                                 <div x-show="isExpand" class="pt-6" id="filter-section-mobile-0">
                                     <div class="space-y-6">
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-color-0" name="color[]" value="white"
+                                            <input id="filter-mobile-paket-0" name="paket[]" value="family"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-mobile-color-0"
+                                            <label for="filter-mobile-paket-0"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">FAMILY PACK</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-color-1" name="color[]" value="beige"
+                                            <input id="filter-mobile-paket-1" name="paket[]" value="personal"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-mobile-color-1"
+                                            <label for="filter-mobile-paket-1"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">PERSONAL MEALBOX</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-color-2" name="color[]" value="blue"
-                                                type="checkbox" checked
+                                            <input id="filter-mobile-paket-2" name="paket[]" value="healthy"
+                                                type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-mobile-color-2"
+                                            <label for="filter-mobile-paket-2"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">HEALTHY DIET</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-color-3" name="color[]" value="brown"
+                                            <input id="filter-mobile-paket-3" name="paket[]" value="advance"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-mobile-color-3"
+                                            <label for="filter-mobile-paket-3"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">ADVANCE DIET</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-color-4" name="color[]" value="green"
+                                            <input id="filter-mobile-paket-4" name="paket[]" value="event"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-mobile-color-4"
+                                            <label for="filter-mobile-paket-4"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">EVENT CATERING</label>
                                         </div>
                                     </div>
@@ -194,31 +194,31 @@
                                 <div x-show="isExpand" class="pt-6" id="filter-section-mobile-1">
                                     <div class="space-y-6">
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-category-0" name="category[]" value="tanpaNasi"
+                                            <input id="filter-mobile-karbo-0" name="karbo[]" value="tanpaNasi"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-mobile-category-0"
+                                            <label for="filter-mobile-karbo-0"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">TANPA NASI</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-category-1" name="category[]" value="nasiPutih"
+                                            <input id="filter-mobile-karbo-1" name="karbo[]" value="nasiPutih"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-mobile-category-1"
+                                            <label for="filter-mobile-karbo-1"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">NASI PUTIH</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-category-2" name="category[]" value="nasiMerah"
+                                            <input id="filter-mobile-karbo-2" name="karbo[]" value="nasiMerah"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-mobile-category-2"
+                                            <label for="filter-mobile-karbo-2"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">NASI MERAH</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-mobile-category-3" name="category[]" value="variatif"
+                                            <input id="filter-mobile-karbo-3" name="karbo[]" value="variatif"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-mobile-category-3"
+                                            <label for="filter-mobile-karbo-3"
                                                 class="ml-3 min-w-0 flex-1 text-gray-500">VARIATIF</label>
                                         </div>
                                     </div>
@@ -229,7 +229,7 @@
                 </div>
             </div>
 
-            <main class="mx-auto max-w-xl px-4 sm:px-6 lg:px-8">
+            <main class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
                 <div class="flex items-baseline justify-between border-b border-gray-200 pb-6 pt-24">
                     {{-- <h1 class="text-4xl font-bold tracking-tight text-gray-900">Senjani</h1> --}}
                     <img class="h-32" src="img/AssetSenjani/LogoSenjaniKitchen.png" alt="Your Company">
@@ -382,34 +382,36 @@
                                 <div x-show="isExpand" class="pt-6" id="filter-section-0">
                                     <div class="space-y-4">
                                         <div class="flex items-center">
-                                            <input id="filter-color-0" name="color[]" value="white" type="checkbox"
+                                            <input id="filter-paket-0" name="paket[]" value="family" type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-color-0"
+                                            <label for="filter-paket-0"
                                                 class="ml-3 text-sm text-gray-600">FAMILY</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-color-1" name="color[]" value="beige" type="checkbox"
+                                            <input id="filter-paket-1" name="paket[]" value="personal"
+                                                type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-color-1" class="ml-3 text-sm text-gray-600">PERSONAL
+                                            <label for="filter-paket-1" class="ml-3 text-sm text-gray-600">PERSONAL
                                                 MEALBOX</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-color-2" name="color[]" value="blue" type="checkbox"
-                                                checked
+                                            <input id="filter-paket-2" name="paket[]" value="healthy"
+                                                type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-color-2" class="ml-3 text-sm text-gray-600">HEALTHY
+                                            <label for="filter-paket-2" class="ml-3 text-sm text-gray-600">HEALTHY
                                                 DIET</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-color-3" name="color[]" value="brown" type="checkbox"
+                                            <input id="filter-paket-3" name="paket[]" value="advance"
+                                                type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-color-3" class="ml-3 text-sm text-gray-600">ADVANCE
+                                            <label for="filter-paket-3" class="ml-3 text-sm text-gray-600">ADVANCE
                                                 DIET</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-color-4" name="color[]" value="green" type="checkbox"
+                                            <input id="filter-paket-4" name="paket[]" value="event" type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-color-4" class="ml-3 text-sm text-gray-600">EVENT
+                                            <label for="filter-paket-4" class="ml-3 text-sm text-gray-600">EVENT
                                                 CATERING</label>
                                         </div>
                                     </div>
@@ -443,31 +445,31 @@
                                 <div x-show="isExpand" class="pt-6" id="filter-section-1">
                                     <div class="space-y-4">
                                         <div class="flex items-center">
-                                            <input id="filter-category-0" name="category[]" value="tanpaNasi"
+                                            <input id="filter-karbo-0" name="karbo[]" value="tanpaNasi"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-category-0" class="ml-3 text-sm text-gray-600">TANPA
+                                            <label for="filter-karbo-0" class="ml-3 text-sm text-gray-600">TANPA
                                                 NASI</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-category-1" name="category[]" value="nasiPutih"
+                                            <input id="filter-karbo-1" name="karbo[]" value="nasiPutih"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-category-1" class="ml-3 text-sm text-gray-600">NASI
+                                            <label for="filter-karbo-1" class="ml-3 text-sm text-gray-600">NASI
                                                 PUTIH</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-category-2" name="category[]" value="nasiMerah"
+                                            <input id="filter-karbo-2" name="karbo[]" value="nasiMerah"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-category-2" class="ml-3 text-sm text-gray-600">NASI
+                                            <label for="filter-karbo-2" class="ml-3 text-sm text-gray-600">NASI
                                                 MERAH</label>
                                         </div>
                                         <div class="flex items-center">
-                                            <input id="filter-category-3" name="category[]" value="variatif"
+                                            <input id="filter-karbo-3" name="karbo[]" value="variatif"
                                                 type="checkbox"
                                                 class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
-                                            <label for="filter-category-3"
+                                            <label for="filter-karbo-3"
                                                 class="ml-3 text-sm text-gray-600">VARIATIF</label>
                                         </div>
                                     </div>
@@ -486,7 +488,7 @@
                                     <div id="product-container"
                                         class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 
-                                        <div class="product" data-categories="variatif">
+                                        {{-- <div class="product" data-paket="family" data-karbo="">
                                             <div class="group relative">
                                                 <div
                                                     class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
@@ -510,7 +512,127 @@
                                             </div>
                                         </div>
 
-                                        <div class="product" data-categories="tanpaNasi">
+                                        <div class="product" data-paket="personal" data-karbo="">
+                                            <div class="group relative">
+                                                <div
+                                                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg"
+                                                        alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true"
+                                                                    class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product" data-paket="healthy" data-karbo="">
+                                            <div class="group relative">
+                                                <div
+                                                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg"
+                                                        alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true"
+                                                                    class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product" data-paket="advance" data-karbo="">
+                                            <div class="group relative">
+                                                <div
+                                                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg"
+                                                        alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true"
+                                                                    class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product" data-paket="event" data-karbo="">
+                                            <div class="group relative">
+                                                <div
+                                                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg"
+                                                        alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true"
+                                                                    class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div> --}}
+
+                                        <div class="product" data-paket="family personal healthy advance event" data-karbo="variatif">
+                                            <div class="group relative">
+                                                <div
+                                                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg"
+                                                        alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true"
+                                                                    class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product" data-paket="family personal healthy advance event" data-karbo="tanpaNasi">
                                             <div class="group relative">
                                                 <div
                                                     class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
@@ -534,7 +656,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="product" data-categories="nasiMerah">
+                                        <div class="product" data-paket="family personal healthy advance event" data-karbo="nasiMerah">
                                             <div class="group relative">
                                                 <div
                                                     class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
@@ -558,7 +680,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="product" data-categories="nasiPutih">
+                                        <div class="product" data-paket="family personal healthy advance event" data-karbo="nasiPutih">
                                             <div class="group relative">
                                                 <div
                                                     class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
