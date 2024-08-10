@@ -88,7 +88,7 @@
                                     <a href="#" class="block px-2 py-3">MALANG</a>
                                 </li>
                                 <li>
-                                    <a href="/surabaya" class="block px-2 py-3">SURABAYA</a>
+                                    <a href="#" class="block px-2 py-3">SURABAYA</a>
                                 </li>
                                 <li>
                                     <a href="#" class="block px-2 py-3">YOGYAKARTA</a>
@@ -282,15 +282,35 @@
                                             'block px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100' :
                                             'block px-4 py-2 text-sm text-gray-500'"
                                         @click.prevent="activeItem = 0" role="menuitem" tabindex="-1"
-                                        id="menu-item-0">Price: Low to High</a>
+                                        id="menu-item-0">Most Popular</a>
 
                                     <a href="#"
                                         :class="activeItem === 1 ?
                                             'block px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100' :
                                             'block px-4 py-2 text-sm text-gray-500'"
                                         @click.prevent="activeItem = 1" role="menuitem" tabindex="-1"
-                                        id="menu-item-1">Price: High to Low</a>
+                                        id="menu-item-1">Best Rating</a>
 
+                                    <a href="#"
+                                        :class="activeItem === 2 ?
+                                            'block px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100' :
+                                            'block px-4 py-2 text-sm text-gray-500'"
+                                        @click.prevent="activeItem = 2" role="menuitem" tabindex="-1"
+                                        id="menu-item-2">Newest</a>
+
+                                    <a href="#"
+                                        :class="activeItem === 3 ?
+                                            'block px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100' :
+                                            'block px-4 py-2 text-sm text-gray-500'"
+                                        @click.prevent="activeItem = 3" role="menuitem" tabindex="-1"
+                                        id="menu-item-3">Price: Low to High</a>
+
+                                    <a href="#"
+                                        :class="activeItem === 4 ?
+                                            'block px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100' :
+                                            'block px-4 py-2 text-sm text-gray-500'"
+                                        @click.prevent="activeItem = 4" role="menuitem" tabindex="-1"
+                                        id="menu-item-4">Price: High to Low</a>
                                 </div>
 
                             </div>
@@ -318,7 +338,7 @@
                             <ul role="list"
                                 class="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
                                 <li>
-                                    <a href="#">MALANG</a>
+                                    <a href="/malang">MALANG</a>
                                 </li>
                                 <li>
                                     <a href="/surabaya">SURABAYA</a>
@@ -463,10 +483,130 @@
 
                             <div class="bg-white">
                                 <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-2 lg:max-w-7xl lg:px-12">
-                                    {{-- <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2> --}}
+                                   <header> <h2 class="text-2xl font-bold tracking-tight text-gray-900">Surabaya</h2></header>
 
                                     <div id="product-container"
                                         class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+
+                                        {{-- <div class="product" data-paket="family" data-karbo="">
+                                            <div class="group relative">
+                                                <div
+                                                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg"
+                                                        alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true"
+                                                                    class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product" data-paket="personal" data-karbo="">
+                                            <div class="group relative">
+                                                <div
+                                                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg"
+                                                        alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true"
+                                                                    class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product" data-paket="healthy" data-karbo="">
+                                            <div class="group relative">
+                                                <div
+                                                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg"
+                                                        alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true"
+                                                                    class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product" data-paket="advance" data-karbo="">
+                                            <div class="group relative">
+                                                <div
+                                                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg"
+                                                        alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true"
+                                                                    class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="product" data-paket="event" data-karbo="">
+                                            <div class="group relative">
+                                                <div
+                                                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                                                    <img src="img/AssetSenjani/11.Snack.jpg"
+                                                        alt="Front of men's Basic Tee in black."
+                                                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                                                </div>
+                                                <div class="mt-4 flex justify-between">
+                                                    <div>
+                                                        <h3 class="text-sm text-gray-700">
+                                                            <a href="#">
+                                                                <span aria-hidden="true"
+                                                                    class="absolute inset-0"></span>
+                                                                Basic Tee
+                                                            </a>
+                                                        </h3>
+                                                        <p class="mt-1 text-sm text-gray-500">Black</p>
+                                                    </div>
+                                                    <p class="text-sm font-medium text-gray-900">$35</p>
+                                                </div>
+                                            </div>
+                                        </div> --}}
 
                                         <div class="product" data-paket="family personal healthy advance event" data-karbo="variatif">
                                             <div class="group relative">
@@ -516,7 +656,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="product" data-paket=" personal healthy advance event" data-karbo="nasiMerah">
+                                        <div class="product" data-paket="family personal healthy advance event" data-karbo="nasiMerah">
                                             <div class="group relative">
                                                 <div
                                                     class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
@@ -563,7 +703,6 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
 
 
 
