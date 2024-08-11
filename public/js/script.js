@@ -27,7 +27,7 @@
             });
 
             // Loop through each product and apply filtering logic
-            document.querySelectorAll('#product-container .product').forEach(function(product) {
+            document.querySelectorAll('#productList .product').forEach(function(product) {
                 const productKarboCategories = product.getAttribute('data-karbo').split(' ');
                 const productPaketCategories = product.getAttribute('data-paket').split(' ');
 
@@ -46,3 +46,31 @@
 
         // Initialize filter when the page loads
         filterProducts();
+
+        document.getElementById('sortLowToHigh').addEventListener('click', function(event) {
+            event.preventDefault();
+            sortProducts('lowToHigh');
+        });
+    
+        document.getElementById('sortHighToLow').addEventListener('click', function(event) {
+            event.preventDefault();
+            sortProducts('highToLow');
+        });
+    
+        function sortProducts(order) {
+            const productList = document.getElementById('productList');
+            const products = Array.from(productList.getElementsByClassName('product'));
+    
+            products.sort((a, b) => {
+                const priceA = parseInt(a.getAttribute('data-price'));
+                const priceB = parseInt(b.getAttribute('data-price'));
+    
+                if (order === 'lowToHigh') {
+                    return priceA - priceB;
+                } else if (order === 'highToLow') {
+                    return priceB - priceA;
+                }
+            });
+    
+            products.forEach(product => productList.appendChild(product));
+        }

@@ -1,7 +1,7 @@
-<div id="product-container"
+<div id="productList"
     class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 
-    <div class="product" data-paket="family personal healthy advance event" data-karbo="variatif">
+    <div class="product" data-price="35" data-paket="family personal healthy advance event" data-karbo="variatif">
         <div class="group relative">
             <div
                 class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
@@ -25,7 +25,7 @@
         </div>
     </div>
 
-    <div class="product" data-paket="family personal healthy advance event" data-karbo="tanpaNasi">
+    <div class="product" data-price="45" data-paket="family personal healthy advance event" data-karbo="tanpaNasi">
         <div class="group relative">
             <div
                 class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
@@ -44,12 +44,12 @@
                     </h3>
                     <p class="mt-1 text-sm text-gray-500">Black</p>
                 </div>
-                <p class="text-sm font-medium text-gray-900">$35</p>
+                <p class="text-sm font-medium text-gray-900">$45</p>
             </div>
         </div>
     </div>
 
-    <div class="product" data-paket=" personal healthy advance event" data-karbo="nasiMerah">
+    <div class="product" data-price="34" data-paket=" personal healthy advance event" data-karbo="nasiMerah">
         <div class="group relative">
             <div
                 class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
@@ -68,12 +68,12 @@
                     </h3>
                     <p class="mt-1 text-sm text-gray-500">Black</p>
                 </div>
-                <p class="text-sm font-medium text-gray-900">$35</p>
+                <p class="text-sm font-medium text-gray-900">$34</p>
             </div>
         </div>
     </div>
 
-    <div class="product" data-paket="family personal healthy advance event" data-karbo="nasiPutih">
+    <div class="product" data-price="40" data-paket="family personal healthy advance event" data-karbo="nasiPutih">
         <div class="group relative">
             <div
                 class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
@@ -92,7 +92,7 @@
                     </h3>
                     <p class="mt-1 text-sm text-gray-500">Black</p>
                 </div>
-                <p class="text-sm font-medium text-gray-900">$35</p>
+                <p class="text-sm font-medium text-gray-900">$40</p>
             </div>
         </div>
     </div>

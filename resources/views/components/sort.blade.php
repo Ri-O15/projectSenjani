@@ -30,15 +30,15 @@
                 class="absolute right-0 z-10 mt-2 w-40 origin-top-right rounded-md bg-white shadow-2xl ring-1 ring-black ring-opacity-5 focus:outline-none"
                 role="menu" aria-orientation="vertical" aria-labelledby="menu-button"
                 tabindex="-1">
-                <div x-data="{ activeItem: 0 }" class="py-1" role="none">
-                    <a href="#"
+                <div x-data="{ activeItem: 5 }" class="py-1" role="none">
+                    <a href="#" id="sortLowToHigh"
                         :class="activeItem === 0 ?
                             'block px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100' :
                             'block px-4 py-2 text-sm text-gray-500'"
                         @click.prevent="activeItem = 0" role="menuitem" tabindex="-1"
                         id="menu-item-0">Price: Low to High</a>
 
-                    <a href="#"
+                    <a href="#" id="sortHighToLow"
                         :class="activeItem === 1 ?
                             'block px-4 py-2 text-sm font-medium text-gray-900 bg-gray-100' :
                             'block px-4 py-2 text-sm text-gray-500'"

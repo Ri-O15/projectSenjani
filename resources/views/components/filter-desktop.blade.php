@@ -1,21 +1,46 @@
 <form class="hidden lg:block">
     <h3 class="sr-only">Categories</h3>
-    <ul role="list"
-        class="space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
+    <ul role="list" x-data="{ activeItem: window.location.pathname }"
+        class=" py-1 space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
         <li>
-            <a href="/malang">MALANG</a>
+            <a href="/malang" :class="activeItem === '/malang' ?
+                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
+                'block px-2 py-3 text-sm text-gray-500'"
+            @click="activeItem = 0" role="menuitem" tabindex="-1"
+            id="menu-item-0">MALANG</a>
+
         </li>
         <li>
-            <a href="/surabaya">SURABAYA</a>
+            <a href="/surabaya" :class="activeItem === '/surabaya' ?
+                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
+                'block px-2 py-3 text-sm text-gray-500'"
+            @click="activeItem = 1" role="menuitem" tabindex="-1"
+            id="menu-item-1">SURABAYA</a>
+
         </li>
         <li>
-            <a href="/yogyakarta">YOGYAKARTA</a>
+            <a href="/yogyakarta" :class="activeItem === '/yogyakarta' ?
+                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
+                'block px-2 py-3 text-sm text-gray-500'"
+            @click="activeItem = 2" role="menuitem" tabindex="-1"
+            id="menu-item-2">YOGYAKARTA</a>
+
         </li>
         <li>
-            <a href="/solo">SOLO</a>
+            <a href="/solo" :class="activeItem === '/solo' ?
+                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
+                'block px-2 py-3 text-sm text-gray-500'"
+            @click="activeItem = 3" role="menuitem" tabindex="-1"
+            id="menu-item-3">SOLO</a>
+
         </li>
         <li>
-            <a href="/semarang">SEMARANG</a>
+            <a href="/semarang" :class="activeItem === '/semarang' ?
+                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
+                'block px-2 py-3 text-sm text-gray-500'"
+            @click="activeItem = 4" role="menuitem" tabindex="-1"
+            id="menu-item-4">SEMARANG</a>
+
         </li>
     </ul>
 

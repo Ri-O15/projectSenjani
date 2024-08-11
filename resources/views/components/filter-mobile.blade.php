@@ -26,21 +26,46 @@
             <!-- Filters -->
             <form class="mt-4 border-t border-gray-200">
                 <h3 class="sr-only">Categories</h3>
-                <ul role="list" class="px-2 py-3 font-medium text-gray-900">
+                <ul role="list" x-data="{ activeItem: 0 }" class="px-2 py-3 font-medium text-gray-900">
                     <li>
-                        <a href="/malang" class="block px-2 py-3">MALANG</a>
+                        <a href="/malang" :class="activeItem === 0 ?
+                            'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
+                            'block px-2 py-3 text-sm text-gray-500'"
+                        @click.prevent="activeItem = 0" role="menuitem" tabindex="-1"
+                        id="menu-item-0">MALANG</a>
+            
                     </li>
                     <li>
-                        <a href="/surabaya" class="block px-2 py-3">SURABAYA</a>
+                        <a href="/surabaya" :class="activeItem === 1 ?
+                            'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
+                            'block px-2 py-3 text-sm text-gray-500'"
+                        @click.prevent="activeItem = 1" role="menuitem" tabindex="-1"
+                        id="menu-item-1">SURABAYA</a>
+            
                     </li>
                     <li>
-                        <a href="/yogyakarta" class="block px-2 py-3">YOGYAKARTA</a>
+                        <a href="/yogyakarta" :class="activeItem === 2 ?
+                            'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
+                            'block px-2 py-3 text-sm text-gray-500'"
+                        @click.prevent="activeItem = 2" role="menuitem" tabindex="-1"
+                        id="menu-item-2">YOGYAKARTA</a>
+            
                     </li>
                     <li>
-                        <a href="/solo" class="block px-2 py-3">SOLO</a>
+                        <a href="/solo" :class="activeItem === 3 ?
+                            'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
+                            'block px-2 py-3 text-sm text-gray-500'"
+                        @click.prevent="activeItem = 3" role="menuitem" tabindex="-1"
+                        id="menu-item-3">SOLO</a>
+            
                     </li>
                     <li>
-                        <a href="/semarang" class="block px-2 py-3">SEMARANG</a>
+                        <a href="/semarang" :class="activeItem === 4 ?
+                            'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
+                            'block px-2 py-3 text-sm text-gray-500'"
+                        @click.prevent="activeItem = 4" role="menuitem" tabindex="-1"
+                        id="menu-item-4">SEMARANG</a>
+            
                     </li>
                 </ul>
 
