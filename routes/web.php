@@ -8,10 +8,21 @@ Route::get('/', function () {
 });
 
 Route::get('/malang', function () {
-    return view('home');
+    return view('malang', ['title' => 'Malang']);
 });
 
-
 Route::get('/surabaya', function () {
-    return view('surabaya');
+    return view('surabaya', ['title' => 'Surabaya']);
+});
+
+Route::get('/yogyakarta', function () {
+    return view('yogyakarta', ['title' => 'Yogyakarta']);
+});
+
+Route::get('/solo', function () {
+    return view('solo', ['title' => 'Solo']);
+});
+
+Route::get('/semarang', function () {
+    return view('semarang', ['title' => 'Semarang']);
 });
