@@ -16,16 +16,12 @@
 
     <div class="bg-white">
         <div x-data="{ isFilter: false }">
-
-            <!--Mobile filter dialog-->
-            {{-- <x-filter-mobile></x-filter-mobile> --}}
-
             <main class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
                 <x-sort></x-sort>
                 <section aria-labelledby="products-heading" class="pb-24 pt-6">
                     <header><h2 id="products-heading" class="sr-only">Products</h2></header>
 
-                    <div class="grid grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
+                    <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
 
                         <!-- Filters -->
                         <x-filter-desktop></x-filter-desktop>
@@ -36,16 +32,16 @@
                             <!-- Your content -->
 
                             <div class="bg-white">
-                                <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-2 lg:max-w-7xl lg:px-12">
+                                <div class="ml-2 max-w-4xl px-4 py-16 sm:px-6 sm:py-2 lg:max-w-7xl lg:px-12">
                                     <x-header>{{ $title }}</x-header>
                                     <x-product></x-product>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </section>
             </main>
+            <x-footer></x-footer>
         </div>
     </div>
 

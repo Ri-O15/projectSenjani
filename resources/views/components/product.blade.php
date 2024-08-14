@@ -1,5 +1,5 @@
 <div id="productList"
-class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
 
 <div class="product" data-price="30" data-paket="family personal healthy advance event" data-karbo="variatif">
     <div class="group relative">
@@ -23,6 +23,7 @@ class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:g
             <p class="text-sm font-medium text-gray-900">$30</p>
         </div>
     </div>
+    <x-button-cost></x-button-cost>
 </div>
 
 <div class="product" data-price="25" data-paket="family personal healthy advance event" data-karbo="tanpaNasi">
@@ -47,6 +48,7 @@ class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:g
             <p class="text-sm font-medium text-gray-900">$25</p>
         </div>
     </div>
+    <x-button-cost></x-button-cost>
 </div>
 
 <div class="product" data-price="45" data-paket=" personal healthy advance event" data-karbo="nasiMerah">
@@ -71,6 +73,7 @@ class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:g
             <p class="text-sm font-medium text-gray-900">$45</p>
         </div>
     </div>
+    <x-button-cost></x-button-cost>
 </div>
 
 <div class="product" data-price="50" data-paket="family personal healthy advance event" data-karbo="nasiPutih">
@@ -95,7 +98,16 @@ class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:g
             <p class="text-sm font-medium text-gray-900">$50</p>
         </div>
     </div>
+    <x-button-cost></x-button-cost>
 </div>
 
 <!-- More products... -->
+
+
+</div>
+
+<div class="fixed bottom-10 right-8">
+    <button id="addAllToCart" class="bg-orange-500 text-white px-4 py-3 rounded shadow-md hover:bg-green-600 transition duration-300 ease-in-out">
+        Tambah Semua ke Keranjang
+    </button>
 </div>
