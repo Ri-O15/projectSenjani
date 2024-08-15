@@ -26,3 +26,9 @@ Route::get('/solo', function () {
 Route::get('/semarang', function () {
     return view('semarang', ['title' => 'Semarang']);
 });
+
+
+use App\Http\Controllers\ProductController;
+
+// Rute untuk menampilkan detail produk
+Route::get('/malang/{slug}', [ProductController::class, 'show'])->name('product.show');

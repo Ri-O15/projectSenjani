@@ -1,5 +1,5 @@
 <nav class="bg-gray-100 text-white fixed w-full top-0 left-0 shadow-lg z-50">
-    <div class="flex items-baseline justify-between border-b border-gray-200 pb-1 pt-10">
+    <div class="flex items-baseline justify-between border-b border-gray-200 pb-1 pt-5">
         {{-- <h1 class="text-4xl font-bold tracking-tight text-gray-900">Senjani</h1> --}}
         <img class="h-12 md:h-16 lg:h-20 xl:h-24 w-auto" src="img/AssetSenjani/LogoSenjaniKitchen.png" alt="Your Company">
     
