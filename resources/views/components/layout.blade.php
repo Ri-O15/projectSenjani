@@ -16,6 +16,11 @@
 
     <div class="bg-white">
         <div x-data="{ isFilter: false }">
+
+            <!--Mobile filter dialog-->
+            {{-- <x-filter-mobile></x-filter-mobile> --}}
+
+            <main class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
                 <x-sort></x-sort>
             <main class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-4 pt-24">
                 <section aria-labelledby="products-heading" class="pb-24 pt-20">
