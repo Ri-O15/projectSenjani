@@ -1,7 +1,7 @@
-<form class="block lg:block w-full px-4 lg:px-6">
+<form class="block lg:block w-full px-4 lg:px-1">
     <h3 class="sr-only">Categories</h3>
     <ul role="list" x-data="{ activeItem: window.location.pathname }"
-        class="py-1 space-y-4 border-b border-gray-200 pb-6 text-sm font-medium text-gray-900">
+        class="grid grid-cols-3 sm:grid-cols-3 lg:grid-cols-1 gap-y-4 gap-x-4">
         <li>
             <a href="/malang" :class="activeItem === '/malang' ?
                 'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
@@ -59,7 +59,7 @@
             </button>
         </h3>
         <div x-show="isExpand" class="pt-6" id="filter-section-0">
-            <div class="space-y-4 grid grid-cols-1 gap-4">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-1 gap-y-4 gap-x-4">
                 <div class="flex items-center">
                     <input id="filter-paket-0" name="paket[]" value="family" type="checkbox"
                         class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
@@ -94,7 +94,7 @@
 
     <div x-data="{ isExpand: true }" class="border-b border-gray-200 py-6">
         <h3 class="-my-3 flow-root">
-            <button type="button" @click="isExpand= !isExpand"
+            <button type="button" @click="isExpand = !isExpand"
                 class="flex w-full items-center justify-between bg-white py-3 text-sm text-gray-400 hover:text-gray-500"
                 aria-controls="filter-section-1" aria-expanded="false">
                 <span class="font-medium text-gray-900">KARBO</span>
@@ -112,7 +112,7 @@
             </button>
         </h3>
         <div x-show="isExpand" class="pt-6" id="filter-section-1">
-            <div class="space-y-4 grid grid-cols-1 gap-4">
+            <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-1 gap-y-4 gap-x-4">
                 <div class="flex items-center">
                     <input id="filter-karbo-0" name="karbo[]" value="tanpaNasi"
                         type="checkbox"
