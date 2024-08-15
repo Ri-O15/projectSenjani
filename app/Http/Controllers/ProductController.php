@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    public function show($slug)
+    public function show($city, $slug)
     {
         // Simulasi data produk (gantilah dengan data dari database jika tersedia)
         $products = [
@@ -30,7 +30,10 @@ class ProductController extends Controller
             abort(404); // Tampilkan halaman 404 jika produk tidak ditemukan
         }
 
-        return view('form', compact('product')); // Render view 'index.blade.php'
+        return view('form', [
+             'city' => $city,
+             'product' => $product
+        ]); // Render view 'index.blade.php'
     }
 }
 

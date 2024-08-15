@@ -3,7 +3,7 @@
     <div id="productList"
     class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
 
-    <div class="product" data-price="30" data-paket="family personal healthy advance event" data-karbo="variatif">
+    <div class="product" x-on:click="window.location.href='{{ route('product.show', ['slug' => 'basic-tee-black', 'city' => 'Surabaya']) }}'"  data-price="30" data-paket="family personal healthy advance event" data-karbo="variatif">
         <div class="group relative">
             <div
                 class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">

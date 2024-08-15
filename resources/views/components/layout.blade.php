@@ -16,11 +16,6 @@
 
     <div class="bg-white">
         <div x-data="{ isFilter: false }">
-
-            <!--Mobile filter dialog-->
-            {{-- <x-filter-mobile></x-filter-mobile> --}}
-
-            <main class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
                 <x-sort></x-sort>
             <main class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-4 pt-24">
                 <section aria-labelledby="products-heading" class="pb-24 pt-20">
@@ -33,9 +28,6 @@
 
                         <!-- Product grid -->
                         <div class="lg:col-span-3">
-
-                            <!-- Your content -->
-
                             <div class="bg-white">
                                 <div class="ml-2 max-w-4xl px-4 py-16 sm:px-6 sm:py-2 lg:max-w-7xl lg:px-12">
                                     <x-header>{{ $title }}</x-header>

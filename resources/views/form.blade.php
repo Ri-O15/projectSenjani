@@ -13,21 +13,24 @@
 <body class="bg-gray-100">
     <div class="container mx-auto px-4 mt-10">
         <div class="flex justify-center">
-            <div class="max-w-md w-full rounded overflow-hidden shadow-lg bg-white">
-                <img class="w-full h-auto object-cover" src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}">
+            <div class="max-w-8xl w-full rounded overflow-hidden shadow-lg bg-white">
+                <div class="px-2 pt-4 pb-2">
+                    <a href="{{ url('/') }}" class="bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
+                        Back
+                    </a>
+                </div>
+                <div class="flex justify-center mt-4">
+                    <img class="max-w-xs h-auto shadow-xl rounded-lg" src="{{ asset($product['image']) }}" alt="{{ $product['name'] }}">
+                </div>
+                
                 <div class="px-6 py-4">
                     <div class="font-bold text-xl mb-2">{{ $product['name'] }}</div>
-                    <p class="text-gray-700 text-base mb-2">
-                        Color: {{ $product['color'] }}
+                    <p class="text-gray-700 text-base mb-2 uppercase">
+                        Color: {{ $city }}
                     </p>
                     <p class="text-gray-700 text-base">
                         Price: ${{ $product['price'] }}
                     </p>
-                </div>
-                <div class="px-6 pt-4 pb-2">
-                    <a href="{{ url('/') }}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                        Back to Products
-                    </a>
                 </div>
 
                 <!-- Formulir Input Tambahan -->

@@ -31,4 +31,4 @@ Route::get('/semarang', function () {
 use App\Http\Controllers\ProductController;
 
 // Rute untuk menampilkan detail produk
-Route::get('/malang/{slug}', [ProductController::class, 'show'])->name('product.show');
+Route::get('/{city}/{slug}', [ProductController::class, 'show'])->name('product.show');
