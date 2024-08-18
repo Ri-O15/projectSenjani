@@ -34,9 +34,6 @@
                     <p class="text-gray-700 text-base mb-2">
                         Price   : Rp.{{ $product['price'] }}
                     </p>
-                    {{-- <p class="text-gray-700 text-base">
-                        QTY : Rp.{{ $product['qty'] }}
-                    </p> --}}
                 </div>
 
                 <!-- Formulir Input Tambahan -->
@@ -64,6 +61,52 @@
                             <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
                             <textarea id="message" name="message" rows="4" class="form-textarea mt-1 block w-full" placeholder="message"></textarea>
                         </div>
+
+                        <!-- Radio Buttons for Subscription -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Subscription</label>
+                            <div>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="Langganan" value="week1" class="form-radio" onclick="updatePrice()">
+                                    <span class="ml-2">1 Week</span>
+                                </label>
+                                <label class="inline-flex items-center ml-4">
+                                    <input type="checkbox" name="Langganan" value="week2" class="form-radio" onclick="updatePrice()">
+                                    <span class="ml-2">2 Weeks</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="priceSubs-display" class="text-gray-700 text-base mb-4">
+                           Price: <span id="priceSubs">Rp.0</span>
+                        </div>
+                        <input type="hidden" id="priceSubs-hidden" name="Harga Langganan" value="Rp.10000">
+
+                        <!-- Radio Buttons for Delivery -->
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2">Delivery</label>
+                            <div>
+                                <label class="inline-flex items-center">
+                                    <input type="checkbox" name="Pengiriman" value="1 PACK/HARI" class="form-radio" onclick="updatePrice()">
+                                    <span class="ml-2">1 PACK/HARI</span>
+                                </label>
+                                <label class="inline-flex items-center ml-4">
+                                    <input type="checkbox" name="Pengiriman" value="2 PACK/HARI" class="form-radio" onclick="updatePrice()">
+                                    <span class="ml-2">2 PACK/HARI</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div id="priceDelv-display" class="text-gray-700 text-base mb-4">
+                            Price: <span id="priceDelv">Rp.0</span>
+                        </div>
+                        <input type="hidden" id="priceDelv-hidden" name="Harga Pengiriman" value="Rp.0">
+
+                        <!-- Display Prices -->
+
+                        <div id="totalPrice-display" class="text-gray-700 text-base mb-4">
+                            Total Price: <span id="totalPrice">Rp.0</span>
+                        </div>
+                        <input type="hidden" id="totalPrice-hidden" name="Total" value="Rp.0">
+
                         <button type="submit"
                             class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                             Submit
@@ -75,6 +118,7 @@
     </div>
 
     <script src="/js/form.js" defer></script>
+
 </body>
 
 </html>
