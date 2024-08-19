@@ -22,7 +22,7 @@
                     </a>
                 </div>
                 <div class="flex justify-center mt-4">
-                    <img class="max-w-xs h-auto shadow-xl rounded-lg" src="{{ asset($product['image']) }}"
+                    <img class="max-w-xs h-auto shadow-lg rounded-lg" src="{{ asset($product['image']) }}"
                         alt="{{ $product['name'] }}">
                 </div>
 
@@ -47,6 +47,8 @@
                     
                     <form id="submit-form">
                         <input type="hidden" name="Produk" value="{{ $product['name'] }}" required>
+                        <input type="hidden" name="Kota" value="{{ $city }}" required>
+                        <input type="hidden" name="Produk" value="{{ $product['price'] }}" required>
                         <div class="mb-4">
                             <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
                             <input type="text" id="name" name="name" class="form-input mt-1 block w-full"
@@ -64,14 +66,14 @@
 
                         <!-- Radio Buttons for Subscription -->
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2">Subscription</label>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">LANGGANAN</label>
                             <div>
                                 <label class="inline-flex items-center">
-                                    <input type="checkbox" name="Langganan" value="week1" class="form-radio" onclick="updatePrice()">
+                                    <input type="checkbox" name="Langganan" value="week1" class="form-radio" onclick="updatePriceSubs()">
                                     <span class="ml-2">1 Week</span>
                                 </label>
                                 <label class="inline-flex items-center ml-4">
-                                    <input type="checkbox" name="Langganan" value="week2" class="form-radio" onclick="updatePrice()">
+                                    <input type="checkbox" name="Langganan" value="week2" class="form-radio" onclick="updatePriceSubs()">
                                     <span class="ml-2">2 Weeks</span>
                                 </label>
                             </div>
@@ -83,14 +85,14 @@
 
                         <!-- Radio Buttons for Delivery -->
                         <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2">Delivery</label>
+                            <label class="block text-gray-700 text-sm font-bold mb-2">PENGIRIMAN</label>
                             <div>
                                 <label class="inline-flex items-center">
-                                    <input type="checkbox" name="Pengiriman" value="1 PACK/HARI" class="form-radio" onclick="updatePrice()">
+                                    <input type="checkbox" name="Pengiriman" value="1 PACK/HARI" class="form-radio" onclick="updatePriceDelv() required">
                                     <span class="ml-2">1 PACK/HARI</span>
                                 </label>
                                 <label class="inline-flex items-center ml-4">
-                                    <input type="checkbox" name="Pengiriman" value="2 PACK/HARI" class="form-radio" onclick="updatePrice()">
+                                    <input type="checkbox" name="Pengiriman" value="2 PACK/HARI" class="form-radio" onclick="updatePriceDelv()">
                                     <span class="ml-2">2 PACK/HARI</span>
                                 </label>
                             </div>

@@ -4,12 +4,46 @@ document.getElementById('submit-form').addEventListener('submit', function(event
     const form = event.target;
     const formData = new FormData(form);
 
+    // Kirim data ke server
     fetch('https://script.google.com/macros/s/AKfycbzGLjFmZ70vtelYuDZwYA8qqSUkCo0TyfLiZjNkFIQvA2Yj_bx3XWlVBAoG6JLAaw0u/exec', {
         method: 'POST',
         body: formData,
     })
     .then(response => response.json()) // Menyesuaikan dengan response dari server
     .then(data => {
+        // Ambil data dari form
+        const Langganan = document.querySelector('input[name="Langganan"]:checked');
+        const Pengiriman = document.querySelector('input[name="Pengiriman"]:checked');
+        const priceSubsText = document.getElementById('priceSubs-hidden').value;
+        const priceDelvText = document.getElementById('priceDelv-hidden').value;
+        const totalPriceText = document.getElementById('totalPrice-hidden').value;
+
+        // Ambil data dari input tersembunyi
+        const productName = document.querySelector('input[name="Produk"][value]').value;
+        const city = document.querySelector('input[name="Kota"]').value;
+        const productPrice = document.querySelector('input[name="Produk"][value]').value;
+
+        // Membuat pesan untuk WhatsApp
+        let message = "Pembelian Anda:\n\n";
+        message += `Nama Produk: ${productName}\n`;
+        message += `Kota: ${city}\n`;
+        message += `Harga Produk: ${productPrice}\n`;
+        message += `Langganan: ${Langganan ? Langganan.nextElementSibling.textContent : 'Tidak ada'}\n`;
+        message += `Pengiriman: ${Pengiriman ? Pengiriman.nextElementSibling.textContent : 'Tidak ada'}\n`;
+        message += `Harga Langganan: ${priceSubsText}\n`;
+        message += `Harga Pengiriman: ${priceDelvText}\n`;
+        message += `Total Harga: ${totalPriceText}\n\n`;
+        message += "Terima kasih atas pembelian Anda!";
+
+        // Encode pesan untuk URL
+        const encodedMessage = encodeURIComponent(message);
+
+        // URL WhatsApp
+        const whatsappURL = `https://wa.me/6285156371803?text=${encodedMessage}`;
+
+        // Arahkan ke WhatsApp
+        window.location.href = whatsappURL;
+
         // Menampilkan alert box
         const alertBox = document.getElementById('alert-box');
         alertBox.style.display = 'block';
@@ -17,13 +51,12 @@ document.getElementById('submit-form').addEventListener('submit', function(event
         // Mengosongkan form setelah berhasil dikirim
         setTimeout(() => {
             history.back();
-        }, 2000);
+        }, 1000);
     })
     .catch(error => {
         console.error('Error:', error);
     });
 });
-
 
 // Menambahkan event listener untuk input Langganan dan Pengiriman
 document.querySelectorAll('input[name="Langganan"]').forEach(input => {
