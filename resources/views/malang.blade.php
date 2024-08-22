@@ -1,107 +1,49 @@
 <x-layout>
-    <x-slot:title>{{ $title }}</x-slot:title>
+    <x-slot:title>Produk {{ ucfirst($city) }}</x-slot:title>
+    
+    <div id="productList"
+         class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
 
-    <div id="productList" x-data
-        class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
+        @if(isset($products) && is_array($products))
+            @foreach($products as $key => $product)
+                <div class="product" x-on:click="window.location.href='{{ route('product.detail', ['city' => $city, 'key' => $key]) }}'" data-price="{{ str_replace(['Rp', '.', ','], '', $product['price']) }}"
+                    data-paket="{{ $product['paket'] ?? '' }}" data-karbo="{{ $product['karbo'] ?? '' }}">
+                    <div class="group relative">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
+                            <img src="{{ asset($product['image']) }}"
+                                 alt="{{ $product['name'] }}"
+                                 class="h-full w-full object-cover object-center lg:h-full lg:w-full">
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700">
+                                    <a>
+                                        <span aria-hidden="true"
+                                              class="absolute inset-0"></span>
+                                        {{ $product['name'] }}
+                                    </a>
+                                </h3>
+                                @if(isset($product['coupun']))
+                                    <p class="mt-1 text-sm text-gray-500">{{ $product['coupun'] }}</p>
+                                    <p class="mt-1 text-sm text-gray-500">{{ $product['unitprice'] }}/Pack</p>
+                                @else
+                                    <p class="mt-1 text-sm text-gray-500">No coupon available</p>
+                                @endif
 
-        <div class="product" x-on:click="window.location.href='{{ route('product.show', ['city' => 'malang','slug' => 'tanpa']) }}'" data-price="30" data-paket="family personal healthy advance event" data-karbo="variatif">
-            <div class="group relative">
-                <div
-                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
-                    <img src="img/AssetSenjani/1.Tanpa.jpg"
-                        alt="Front of men's Basic Tee in black."
-                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-                </div>
-                <div class="mt-4 flex justify-between">
-                    <div>
-                        <h3 class="text-sm text-gray-700">
-                            <a>
-                                <span aria-hidden="true"
-                                    class="absolute inset-0"></span>
-                                Tanpa Nasi
-                            </a>
-                        </h3>
-                        <p class="mt-1 text-sm text-gray-500">1 Kotak</p>
+                            </div>
+                            <div class="text-right text-orange-500">
+                                <p class="flex items-center">
+                                    <span class="text-xs font-normal text-gray-900 line-through text-opacity-50 mr-1">Rp147.000 </span>
+                                    <span class="text-sm font-extrabold text-orange-500">{{ $product['price'] }}</span>
+                           </div>
+                            
+                        </div>
                     </div>
-                    <p class="text-sm font-medium text-gray-900">Rp.10000</p>
                 </div>
-            </div>
-        </div>
-
-        <div class="product" data-price="25" data-paket="family personal healthy advance event" data-karbo="tanpaNasi">
-            <div class="group relative">
-                <div
-                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
-                    <img src="img/AssetSenjani/1.Tanpa.jpg"
-                        alt="Front of men's Basic Tee in black."
-                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-                </div>
-                <div class="mt-4 flex justify-between">
-                    <div>
-                        <h3 class="text-sm text-gray-700">
-                            <a>
-                                <span aria-hidden="true"
-                                    class="absolute inset-0"></span>
-                                Basic Tee
-                            </a>
-                        </h3>
-                        <p class="mt-1 text-sm text-gray-500">Black</p>
-                    </div>
-                    <p class="text-sm font-medium text-gray-900">$25</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="product" data-price="45" data-paket=" personal healthy advance event" data-karbo="nasiMerah">
-            <div class="group relative">
-                <div
-                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
-                    <img src="img/AssetSenjani/3.Merah.jpg"
-                        alt="Front of men's Basic Tee in black."
-                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-                </div>
-                <div class="mt-4 flex justify-between">
-                    <div>
-                        <h3 class="text-sm text-gray-700">
-                            <a>
-                                <span aria-hidden="true"
-                                    class="absolute inset-0"></span>
-                                Basic Tee
-                            </a>
-                        </h3>
-                        <p class="mt-1 text-sm text-gray-500">Black</p>
-                    </div>
-                    <p class="text-sm font-medium text-gray-900">$45</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="product" data-price="50" data-paket="family personal healthy advance event" data-karbo="nasiPutih">
-            <div class="group relative">
-                <div
-                    class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
-                    <img src="img/AssetSenjani/2.Putih.jpg"
-                        alt="Front of men's Basic Tee in black."
-                        class="h-full w-full object-cover object-center lg:h-full lg:w-full">
-                </div>
-                <div class="mt-4 flex justify-between">
-                    <div>
-                        <h3 class="text-sm text-gray-700">
-                            <a>
-                                <span aria-hidden="true"
-                                    class="absolute inset-0"></span>
-                                Basic Tee
-                            </a>
-                        </h3>
-                        <p class="mt-1 text-sm text-gray-500">Black</p>
-                    </div>
-                    <p class="text-sm font-medium text-gray-900">$50</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- More products... -->
-
-
+            @endforeach
+        @else
+            <p>Produk tidak tersedia.</p>
+        @endif
+        
     </div>
 </x-layout>

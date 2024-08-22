@@ -19,7 +19,7 @@
                 <x-sort></x-sort>
             <main class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-4 pt-24">
                 <section aria-labelledby="products-heading" class="pb-24 pt-20">
-                    <header><h2 id="products-heading" class="sr-only">Products</h2></header>
+                    {{-- <h2 id="products-heading" class="sr-only">Products</h2> --}}
 
                     <div class="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-4">
 
@@ -30,7 +30,7 @@
                         <div class="lg:col-span-3">
                             <div class="bg-white">
                                 <div class="ml-2 max-w-4xl px-4 py-16 sm:px-6 sm:py-2 lg:max-w-7xl lg:px-12">
-                                    <x-header>{{ $title }}</x-header>
+                                    <x-city-name>{{ $title }}</x-city-name>
                                     {{ $slot }}
                                 </div>
                             </div>

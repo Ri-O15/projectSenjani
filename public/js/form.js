@@ -24,7 +24,7 @@ document.getElementById('submit-form').addEventListener('submit', function(event
         const productPrice = document.querySelector('input[name="Produk"][value]').value;
 
         // Membuat pesan untuk WhatsApp
-        let message = "Pembelian Anda:\n\n";
+        let message = "Pembelian :\n\n";
         message += `Nama Produk: ${productName}\n`;
         message += `Kota: ${city}\n`;
         message += `Harga Produk: ${productPrice}\n`;
@@ -33,7 +33,7 @@ document.getElementById('submit-form').addEventListener('submit', function(event
         message += `Harga Langganan: ${priceSubsText}\n`;
         message += `Harga Pengiriman: ${priceDelvText}\n`;
         message += `Total Harga: ${totalPriceText}\n\n`;
-        message += "Terima kasih atas pembelian Anda!";
+        message += "Konfirmasi Pembelian";
 
         // Encode pesan untuk URL
         const encodedMessage = encodeURIComponent(message);
@@ -146,3 +146,16 @@ function updateTotalPrice() {
     // Update hidden input for total price
     document.getElementById('totalPrice-hidden').value = totalPriceText;
 }
+
+
+function validateCheckboxes() {
+    const checkboxes = document.querySelectorAll('input[name="Pengiriman"]');
+    const checkedOne = Array.prototype.slice.call(checkboxes).some(x => x.checked);
+
+    checkboxes.forEach(checkbox => {
+        checkbox.required = !checkedOne;
+    });
+}
+
+// Ensure validation on page load
+validateCheckboxes();

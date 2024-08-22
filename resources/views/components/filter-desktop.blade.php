@@ -66,7 +66,7 @@
                     <label for="filter-paket-0" class="ml-3 text-sm text-gray-600">FAMILY</label>
                 </div>
                 <div class="flex items-center">
-                    <input id="filter-paket-1" name="paket[]" value="personal"
+                    <input id="filter-paket-1" name="paket[]" value="mealbox"
                         type="checkbox"
                         class="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500">
                     <label for="filter-paket-1" class="ml-3 text-sm text-gray-600">PERSONAL MEALBOX</label>
