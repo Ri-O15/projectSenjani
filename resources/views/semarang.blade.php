@@ -15,8 +15,8 @@
                                  class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                         </div>
                         <div class="mt-4 flex justify-between">
-                            <div>
-                                <h3 class="text-sm text-gray-700">
+                            <div class="mr-2">
+                                <h3 class="text-sm text-gray-600 font-extrabold">
                                     <a>
                                         <span aria-hidden="true"
                                               class="absolute inset-0"></span>
@@ -31,11 +31,11 @@
                                 @endif
 
                             </div>
-                            <div class="text-right text-orange-500">
+                            <div class="text-right">
                                 <p class="flex items-center">
-                                    <span class="text-xs font-normal text-gray-900 line-through text-opacity-50 mr-1">Rp147.000 </span>
-                                    <span class="text-sm font-extrabold text-orange-500">{{ $product['price'] }}</span>
-                           </div>
+                                    <span class="text-xs font-normal text-gray-900 line-through text-opacity-50 mr-1">{{ $product['startprice'] }}</span></p>
+                                <p><span class="text-sm font-extrabold text-orange-500">{{ $product['price'] }}</span></p>
+                            </div>
                             
                         </div>
                     </div>

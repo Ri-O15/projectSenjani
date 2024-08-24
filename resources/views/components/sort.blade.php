@@ -1,5 +1,5 @@
-<header class="bg-gray-100 text-white fixed w-full top-0 left-2 shadow-md z-50">
-    <div class="flex items-baseline justify-between border-b border-gray-200 pb-1 pt-5">
+<header class="bg-gray-100 text-white fixed w-full top-0 left-2 shadow-md z-50 ">
+    <div class="flex items-baseline justify-between border-b border-gray-200 pb-4 pt-8">
         {{-- <h1 class="text-4xl font-bold tracking-tight text-gray-900">Senjani</h1> --}}
         <img class="h-12 md:h-16 lg:h-20 xl:h-24 w-auto ml-6" src="img/AssetSenjani/LogoSenjaniKitchen.png" alt="Senjani Kitchen">
     
