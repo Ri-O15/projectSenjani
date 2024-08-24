@@ -35,8 +35,7 @@
                         Price   : {{ $product['price'] }}
                     </p>
                 </div>
-
-                <!-- Formulir Input Tambahan -->
+                
                 <div class="px-6 py-4">
                     <h2 class="font-bold text-lg mb-4">Submit Your Details</h2>
                     
@@ -47,8 +46,8 @@
                     
                     <form id="submit-form">
                         <input type="hidden" name="Produk" value="{{ $product['name'] }}" required>
-                        <input type="hidden" name="Kota" value="{{ $city }}" required>
-                        <input type="hidden" name="Produk" value="{{ $product['price'] }}" required>
+                        <input type="hidden" id="kota" name="Kota" value="{{ $city }}" required>
+                        <input type="hidden" name="Harga" value="{{ $product['price'] }}" required>
                         <div class="mb-4">
                             <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
                             <input type="text" id="name" name="name" class="form-input mt-1 block w-full"
@@ -64,53 +63,8 @@
                             <textarea id="message" name="message" rows="4" class="form-textarea mt-1 block w-full" placeholder="message"></textarea>
                         </div>
 
-                        {{-- <!-- Radio Buttons for Subs -->
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2">LANGGANAN</label>
-                            <div>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" name="Langganan" value="week1" class="form-radio" onclick="updatePriceSubs()">
-                                    <span class="ml-2">1 Week</span>
-                                </label>
-                                <label class="inline-flex items-center ml-4">
-                                    <input type="checkbox" name="Langganan" value="week2" class="form-radio" onclick="updatePriceSubs()">
-                                    <span class="ml-2">2 Weeks</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div id="priceSubs-display" class="text-gray-700 text-base mb-4">
-                           Price: <span id="priceSubs">Rp.0</span>
-                        </div>
-                        <input type="hidden" id="priceSubs-hidden" name="Harga Langganan" value="Rp.10000">
-
-                        <!-- Radio Buttons for Delv -->
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2">PENGIRIMAN</label>
-                            <div>
-                                <label class="inline-flex items-center">
-                                    <input type="checkbox" name="Pengiriman" value="1 PACK/HARI" class="form-radio" onclick="validateCheckboxes(); updatePriceDelv()">
-                                    <span class="ml-2">1 PACK/HARI</span>
-                                </label>
-                                <label class="inline-flex items-center ml-4">
-                                    <input type="checkbox" name="Pengiriman" value="2 PACK/HARI" class="form-radio" onclick="validateCheckboxes(); updatePriceDelv()">
-                                    <span class="ml-2">2 PACK/HARI</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div id="priceDelv-display" class="text-gray-700 text-base mb-4">
-                            Price: <span id="priceDelv">Rp.0</span>
-                        </div>
-                        <input type="hidden" id="priceDelv-hidden" name="Harga Pengiriman" value="Rp.0">
-
-                        <!-- Display Prices -->
-
-                        <div id="totalPrice-display" class="text-gray-700 text-base mb-4">
-                            Total Price: <span id="totalPrice">Rp.0</span>
-                        </div>
-                        <input type="hidden" id="totalPrice-hidden" name="Total" value="Rp.0"> --}}
-
-                        <button type="submit"
-                            class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                        <button id="submit-button" type="submit"
+                        class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
                             Submit
                         </button>
                     </form>
