@@ -39,7 +39,6 @@
                 <div class="px-6 py-4">
                     <h2 class="font-bold text-lg mb-4">Masukkan Data Diri Anda</h2>
                     
-                    <!-- Alert box -->
                     <div id="alert-box" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" style="display: none;">
                         <span class="block sm:inline">Your form has been submitted successfully!</span>
                     </div>
