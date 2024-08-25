@@ -6,18 +6,6 @@ use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    //     $product = $products[$slug] ?? null;
-
-    //     if (!$product) {
-    //         abort(404); // Tampilkan halaman 404 jika produk tidak ditemukan
-    //     }
-
-    //     return view('form', [
-    //          'city' => $city,
-    //          'product' => $product
-    //     ]); // Render view 'index.blade.php'
-    // }
-
     protected $products = [
 
 

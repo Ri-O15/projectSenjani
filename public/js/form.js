@@ -18,7 +18,7 @@ document.getElementById('submit-form').addEventListener('submit', function(event
     })
     .then(response => response.json())
     .then(data => {
-        const name = document.querySelector('input[name="name"]').value;
+        const name = document.querySelector('input[name="Nama"]').value;
         const productName = document.querySelector('input[name="Produk"]').value;
         const city = document.querySelector('input[name="Kota"]').value;
         const productPrice = document.querySelector('input[name="Harga"]').value;
@@ -35,7 +35,7 @@ document.getElementById('submit-form').addEventListener('submit', function(event
         const whatsappURL = `https://wa.me/6285156371803?text=${encodedMessage}`;
 
         window.location.href = whatsappURL;
-x
+
         const alertBox = document.getElementById('alert-box');
         alertBox.style.display = 'block';
 

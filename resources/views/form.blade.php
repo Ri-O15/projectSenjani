@@ -37,7 +37,7 @@
                 </div>
                 
                 <div class="px-6 py-4">
-                    <h2 class="font-bold text-lg mb-4">Submit Your Details</h2>
+                    <h2 class="font-bold text-lg mb-4">Masukkan Data Diri Anda</h2>
                     
                     <!-- Alert box -->
                     <div id="alert-box" class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-4" style="display: none;">
@@ -50,17 +50,17 @@
                         <input type="hidden" name="Harga" value="{{ $product['price'] }}" required>
                         <div class="mb-4">
                             <label for="name" class="block text-gray-700 text-sm font-bold mb-2">Name</label>
-                            <input type="text" id="name" name="name" class="form-input mt-1 block w-full"
+                            <input type="text" id="name" name="Nama" class="form-input mt-1 block w-full"
                                 placeholder="name" required>
                         </div>
                         <div class="mb-4">
                             <label for="email" class="block text-gray-700 text-sm font-bold mb-2">Email</label>
-                            <input type="email" id="email" name="email"
+                            <input type="email" id="email" name="Email"
                                 class="form-input mt-1 block w-full" placeholder="email" required>
                         </div>
                         <div class="mb-4">
                             <label for="message" class="block text-gray-700 text-sm font-bold mb-2">Message</label>
-                            <textarea id="message" name="message" rows="4" class="form-textarea mt-1 block w-full" placeholder="message"></textarea>
+                            <textarea id="message" name="Message" rows="4" class="form-textarea mt-1 block w-full" placeholder="message"></textarea>
                         </div>
 
                         <button id="submit-button" type="submit"
