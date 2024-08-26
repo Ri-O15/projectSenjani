@@ -16,7 +16,7 @@
         <div class="flex justify-center">
             <div class="max-w-8xl w-full rounded overflow-hidden shadow-lg bg-white">
                 <div class="px-2 pt-4 pb-2">
-                    <a href="{{ url('/') }}"
+                    <a href="{{ url()->previous() }}"
                         class="bg-gray-400 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded">
                         Back
                     </a>

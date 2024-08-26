@@ -26,10 +26,10 @@
                         <!-- Filters -->
                         <x-filter-desktop></x-filter-desktop>
 
-                        <!-- Product grid -->
+
                         <div class="lg:col-span-3">
                             <div class="bg-white">
-                                <div class="ml-2 max-w-4xl px-4 py-16 sm:px-6 sm:py-2 lg:max-w-7xl lg:px-4">
+                                <div class="ml-6 max-w-4xl px-4 py-2 sm:px-6 sm:py-2 lg:max-w-7xl lg:px-4">
                                     <x-city-name>{{ $title }}</x-city-name>
                                     {{ $slot }}
                                 </div>

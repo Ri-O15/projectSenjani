@@ -1,4 +1,4 @@
-<form class="block lg:block w-full px-4 lg:px-1">
+<form class="block lg:block w-full px-4 lg:px-1 ml-2">
     <h3 class="sr-only">Categories</h3>
     <ul role="list" x-data="{ activeItem: window.location.pathname }"
         class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-y-4 gap-x-4">

@@ -2,11 +2,11 @@
     <x-slot:title>Produk {{ ucfirst($city) }}</x-slot:title>
     
     <div id="productList"
-         class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-8">
+         class="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4 xl:gap-x-4">
 
         @if(isset($products) && is_array($products))
             @foreach($products as $key => $product)
-                <div class="product" x-on:click="window.location.href='{{ route('product.detail', ['city' => $city, 'key' => $key]) }}'" data-price="{{ str_replace(['Rp', '.', ','], '', $product['price']) }}"
+                <div class="product mr-6" x-on:click="window.location.href='{{ route('product.detail', ['city' => $city, 'key' => $key]) }}'" data-price="{{ str_replace(['Rp', '.', ','], '', $product['price']) }}"
                     data-paket="{{ $product['paket'] ?? '' }}" data-karbo="{{ $product['karbo'] ?? '' }}">
                     <div class="group relative">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">

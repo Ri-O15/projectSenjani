@@ -1,6 +1,5 @@
-<header class="bg-gray-100 text-white fixed w-full top-0 left-2 shadow-md z-50 ">
+<header class="bg-gray-100 text-white fixed w-full top-0 left-2 shadow-md z-50">
     <div class="flex items-baseline justify-between border-b border-gray-200 pb-4 pt-8">
-        {{-- <h1 class="text-4xl font-bold tracking-tight text-gray-900">Senjani</h1> --}}
         <img class="h-12 md:h-16 lg:h-20 xl:h-24 w-auto ml-6" src="img/AssetSenjani/LogoSenjaniKitchen.png" alt="Senjani Kitchen">
     
         <div class="flex items-center">
@@ -20,8 +19,6 @@
                     </button>
                 </div>
                 
-    
-    
                 <div x-show="isOpen" x-transition:enter="transition ease-out duration-100 transform"
                     x-transition:enter-start="opacity-0 scale-95"
                     x-transition:enter-end="opacity-100 scale-100"
