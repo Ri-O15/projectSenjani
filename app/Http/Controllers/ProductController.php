@@ -2075,37 +2075,31 @@ class ProductController extends Controller
         return view('yogyakarta', ['products' => $products, 'city' => 'yogyakarta']);
     }
 
-    public function showProductDetail($city, $key)
-    {
-        $products = $this->products[$city] ?? [];
-        $product = $products[$key] ?? null;
+    // public function showProductDetail($city, $key)
+    // {
+    //     $products = $this->products[$city] ?? [];
+    //     $product = $products[$key] ?? null;
     
-        if (!$product) {
-            abort(404);
-        }
+    //     if (!$product) {
+    //         abort(404);
+    //     }
     
-        return view('form', ['product' => $product, 'city' => $city]);
-    }
+    //     return view('form', ['product' => $product, 'city' => $city]);
+    // }
     
     public function show($city, $key)
     {
-        // Ambil produk berdasarkan kota dan kunci produk
         $products = $this->products[$city] ?? [];
         $product = $products[$key] ?? null;
     
-        // Jika produk tidak ditemukan, tampilkan halaman 404
         if (!$product) {
             abort(404);
         }
     
-        // Tampilkan halaman detail produk
         return view('form', [
             'product' => $product,
             'city' => $city,
         ]);
     }
-    
-    
-
 }
 

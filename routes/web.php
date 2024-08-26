@@ -11,31 +11,10 @@ Route::get('/home', function () {
     return view('home', ['title' => 'Home']);
 });
 
-// Route::get('/malang', function () {
-//     return view('malang', ['title' => 'Malang']);
-// });
-
-// Route::get('/surabaya', function () {
-//     return view('surabaya', ['title' => 'Surabaya']);
-// });
-
-// Route::get('/yogyakarta', function () {
-//     return view('yogyakarta', ['title' => 'Yogyakarta']);
-// });
-
-// Route::get('/solo', function () {
-//     return view('solo', ['title' => 'Solo']);
-// });
-
-// Route::get('/semarang', function () {
-//     return view('semarang', ['title' => 'Semarang']);
-// });
-
-
 use App\Http\Controllers\ProductController;
 
 // Rute untuk menampilkan detail produk
-Route::get('/{city}/{slug}', [ProductController::class, 'show'])->name('product.show');
+// Route::get('/{city}/{slug}', [ProductController::class, 'show'])->name('product.show');
 
 Route::get('/solo', [ProductController::class, 'showSolo'])->name('products.showSolo');
 Route::get('/surabaya', [ProductController::class, 'showSurabaya'])->name('products.showSurabaya');
@@ -44,5 +23,5 @@ Route::get('/yogyakarta', [ProductController::class, 'showYogyakarta'])->name('p
 Route::get('/semarang', [ProductController::class, 'showSemarang'])->name('products.showSemarang');
 
 
-Route::get('/{city}/{key}', [ProductController::class, 'showProductDetail'])->name('product.detail');
+Route::get('/{city}/{key}', [ProductController::class, 'show'])->name('product.detail');
 
