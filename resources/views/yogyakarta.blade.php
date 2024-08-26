@@ -16,7 +16,7 @@
                         </div>
                         <div class="mt-4 flex justify-between">
                             <div class="mr-2">
-                                <h3 class="text-sm text-gray-600 font-extrabold">
+                                <h3 class="text-sm text-gray-600 font-bold">
                                     <a>
                                         <span aria-hidden="true"
                                               class="absolute inset-0"></span>

@@ -32,7 +32,7 @@
                         Kota    : {{ $city }}
                     </p>
                     <p class="text-gray-700 text-base mb-2">
-                        Price   : {{ $product['price'] }}
+                        Harga   : {{ $product['price'] }}
                     </p>
                 </div>
                 
