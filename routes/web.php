@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 
 
 Route::get('/', function () {
@@ -11,8 +12,6 @@ Route::get('/home', function () {
     return view('home', ['title' => 'Home']);
 });
 
-use App\Http\Controllers\ProductController;
-
 // Rute untuk menampilkan detail produk
 // Route::get('/{city}/{slug}', [ProductController::class, 'show'])->name('product.show');
 
@@ -21,7 +20,6 @@ Route::get('/surabaya', [ProductController::class, 'showSurabaya'])->name('produ
 Route::get('/malang', [ProductController::class, 'showMalang'])->name('products.showMalang');
 Route::get('/yogyakarta', [ProductController::class, 'showYogyakarta'])->name('products.showYogyakarta');
 Route::get('/semarang', [ProductController::class, 'showSemarang'])->name('products.showSemarang');
-
 
 Route::get('/{city}/{key}', [ProductController::class, 'show'])->name('product.detail');
 

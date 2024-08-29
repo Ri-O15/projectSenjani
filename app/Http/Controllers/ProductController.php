@@ -8,7 +8,6 @@ class ProductController extends Controller
 {
     protected $products = [
 
-
         // Produk untuk Solo
         'solo' => [
             'mealsolo6' => [
@@ -2074,18 +2073,6 @@ class ProductController extends Controller
         $products = $this->products['yogyakarta'];
         return view('yogyakarta', ['products' => $products, 'city' => 'yogyakarta']);
     }
-
-    // public function showProductDetail($city, $key)
-    // {
-    //     $products = $this->products[$city] ?? [];
-    //     $product = $products[$key] ?? null;
-    
-    //     if (!$product) {
-    //         abort(404);
-    //     }
-    
-    //     return view('form', ['product' => $product, 'city' => $city]);
-    // }
     
     public function show($city, $key)
     {

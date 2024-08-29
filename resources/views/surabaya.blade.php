@@ -6,7 +6,7 @@
 
         @if(isset($products) && is_array($products))
             @foreach($products as $key => $product)
-                <div class="product" x-on:click="window.location.href='{{ route('product.detail', ['city' => $city, 'key' => $key]) }}'" data-price="{{ str_replace(['Rp', '.', ','], '', $product['price']) }}"
+                <div class="product shadow-md hover:shadow-sm" x-on:click="window.location.href='{{ route('product.detail', ['city' => $city, 'key' => $key]) }}'" data-price="{{ str_replace(['Rp', '.', ','], '', $product['price']) }}"
                     data-paket="{{ $product['paket'] ?? '' }}" data-karbo="{{ $product['karbo'] ?? '' }}">
                     <div class="group relative">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-90">
@@ -16,27 +16,25 @@
                         </div>
                         <div class="mt-4 flex justify-between">
                             <div>
-                                <h3 class="text-sm text-gray-600 font-extrabold mr-10">
+                                <h3 class="text-sm text-gray-600 font-bold">
                                     <a>
                                         <span aria-hidden="true"
                                               class="absolute inset-0"></span>
                                         {{ $product['name'] }}
                                     </a>
                                 </h3>
+                                <div>
+                                    <p><span class="text-md font-extrabold text-orange-500">{{ $product['price'] }}</span></p>
+                                    <p class="flex items-center">
+                                        <span class="text-xs font-normal text-gray-900 line-through text-opacity-50 mr-1">{{ $product['startprice'] }}</span></p>
+                                </div>
                                 @if(isset($product['coupun']))
                                     <p class="mt-1 text-sm text-gray-500">{{ $product['coupun'] }}</p>
                                     <p class="mt-1 text-sm text-gray-500">{{ $product['unitprice'] }}/Pack</p>
                                 @else
                                     <p class="mt-1 text-sm text-gray-500">No coupon available</p>
                                 @endif
-
                             </div>
-                            <div class="text-right">
-                                <p class="flex items-center">
-                                    <span class="text-xs font-normal text-gray-900 line-through text-opacity-50 mr-1">{{ $product['startprice'] }}</span></p>
-                                <p><span class="text-sm font-extrabold text-orange-500">{{ $product['price'] }}</span></p>
-                            </div>
-                            
                         </div>
                     </div>
                 </div>
