@@ -4,36 +4,36 @@
         class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-y-4 gap-x-4">
         <li>
             <a href="/malang" :class="activeItem === '/malang' ?
-                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
-                'block px-2 py-3 text-sm text-gray-500'"
+                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100 shadow-md' :
+                'block px-2 py-3 text-sm text-gray-500 hover:shadow-md active:shadow-md'"
                 @click="activeItem = 0" role="menuitem" tabindex="-1"
                 id="menu-item-0">MALANG</a>
         </li>
         <li>
             <a href="/surabaya" :class="activeItem === '/surabaya' ?
-                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
-                'block px-2 py-3 text-sm text-gray-500'"
+                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100 shadow-md' :
+                'block px-2 py-3 text-sm text-gray-500 hover:shadow-md active:shadow-md'"
                 @click="activeItem = 1" role="menuitem" tabindex="-1"
                 id="menu-item-1">SURABAYA</a>
         </li>
         <li>
             <a href="/yogyakarta" :class="activeItem === '/yogyakarta' ?
-                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
-                'block px-2 py-3 text-sm text-gray-500'"
+                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100 shadow-md' :
+                'block px-2 py-3 text-sm text-gray-500 hover:shadow-md active:shadow-md'"
                 @click="activeItem = 2" role="menuitem" tabindex="-1"
                 id="menu-item-2">YOGYAKARTA</a>
         </li>
         <li>
             <a href="/solo" :class="activeItem === '/solo' ?
-                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
-                'block px-2 py-3 text-sm text-gray-500'"
+                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100 shadow-md' :
+                'block px-2 py-3 text-sm text-gray-500 hover:shadow-md active:shadow-md'"
                 @click="activeItem = 3" role="menuitem" tabindex="-1"
                 id="menu-item-3">SOLO</a>
         </li>
         <li>
             <a href="/semarang" :class="activeItem === '/semarang' ?
-                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100' :
-                'block px-2 py-3 text-sm text-gray-500'"
+                'block px-2 py-3 text-sm font-medium text-gray-900 bg-gray-100 shadow-md' :
+                'block px-2 py-3 text-sm text-gray-500 hover:shadow-md active:shadow-md'"
                 @click="activeItem = 4" role="menuitem" tabindex="-1"
                 id="menu-item-4">SEMARANG</a>
         </li>

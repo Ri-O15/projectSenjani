@@ -17,7 +17,7 @@
     <div class="bg-white">
         <div x-data="{ isFilter: false }">
                 <x-sort></x-sort>
-            <main class="mx-auto max-w-8xl px-8 sm:px-6 lg:px-2 sm:pt-32 lg:pt-48">
+            <main class="mx-auto max-w-8xl px-8 sm:px-6 lg:px-2 sm:pt-32 lg:pt-44">
                 <section aria-labelledby="products-heading">
                     {{-- <h2 id="products-heading" class="sr-only">Products</h2> --}}
 
