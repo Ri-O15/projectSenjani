@@ -5,15 +5,13 @@ use App\Http\Controllers\ProductController;
 
 
 Route::get('/', function () {
-    return redirect('/login ');
+    return redirect('/home');
 });
 
-Route::get('/login', function () {
-    return view('login');
-})->name('login');
-Route::get('/register', function () {
-    return view('register');
-})->name('register');
+Route::get('/home', function () {
+    return view('home', ['title' => 'Home']);
+});
+
 
 // Rute untuk menampilkan detail produk
 // Route::get('/{city}/{slug}', [ProductController::class, 'show'])->name('product.show');
